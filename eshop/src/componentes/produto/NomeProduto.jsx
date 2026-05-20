@@ -1,19 +1,29 @@
+import {
+  AddBotao,
+  AddCar,
+  AddTexto,
+  ContainerDesc,
+  ContainerProd,
+  Img,
+  Preco,
+  ProdCard,
+  ProdNome,
+} from "./styles";
+
 export default function NomeProduto({ produto, handleCarrinho }) {
   return (
-    <div className="catalogo">
-      <img className="catalogo__img" src={produto.image} alt="" />
-      <div className="catalogo__desc">
-        <div className="produto__info">
-          <h2 className="produto__nomee">{produto.title}</h2>
-          <h3>R${produto.price}</h3>
-        </div>
-        <button
-          className="catalogo__button"
-          onClick={() => handleCarrinho(produto)}
-        >
-          +
-        </button>
-      </div>
-    </div>
+    <ProdCard>
+      <Img src={produto.image} alt="produto" />
+      <ContainerDesc>
+        <ContainerProd>
+          <ProdNome>{produto.title}</ProdNome>
+          <Preco>R${produto.price}</Preco>
+        </ContainerProd>
+      </ContainerDesc>
+      <AddCar onClick={() => handleCarrinho(produto)}>
+        <AddTexto>Adicionar ao carrinho</AddTexto>
+        <AddBotao>+</AddBotao>
+      </AddCar>
+    </ProdCard>
   );
 }

@@ -1,13 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-
-  background-color: rgb(255, 255, 255);
+.pagina {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .container {
@@ -15,55 +8,10 @@ body {
   flex-wrap: wrap;
   gap: 100px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 20px 0px;
 }
 
-.produto__info {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.catalogo {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: solid 1px black;
-}
-
-.catalogo__img {
-  width: 100%;
-  padding: 10px;
-  height: 250px;
-  border-bottom: 1px solid black;
-  object-fit: contain;
-}
-
-.catalogo__desc {
-  padding: 8px;
-  display: flex;
-  align-items: top;
-  justify-content: space-between;
-}
-
-.produto__nomee {
-  color: rgb(37, 37, 37);
-  font-size: 1em;
-  text-align: left;
-}
-
-.catalogo__button {
-  height: 40px;
-  border: none;
-  background-color: white;
-  font-size: 2em;
-}
-
-.catalogo__button:hover {
-  cursor: pointer;
-}
 
 .modal {
   position: fixed;
@@ -93,11 +41,11 @@ body {
   z-index: 1000;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  padding: 10px 20px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .carrinho__top {
@@ -108,7 +56,6 @@ body {
   width: 100%;
   color: black;
   padding: 0px 30px;
-
 }
 
 .carrinho__total {
@@ -137,9 +84,9 @@ body {
 
 .carrinho__button {
   width: 90%;
-  background-color: black;
+  background-color: #1f1f1f;
   font-size: 1.4em;
-  color: wheat;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 14px;
   padding: 10px;
@@ -162,3 +109,6 @@ body {
   flex-direction: column;
   text-align: left;
 }
+
+
+

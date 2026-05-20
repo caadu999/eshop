@@ -1,6 +1,6 @@
 import "./estilos/App.css";
 
-import Header from "./componentes/header/logo";
+import Header from "./componentes/header/index";
 import { useEffect, useState } from "react";
 import Produto from "./componentes/produto/Produto";
 import Carrinho from "./componentes/carrinho/Carrinho";
