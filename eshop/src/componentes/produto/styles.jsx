@@ -10,14 +10,14 @@ export const Img = styled.img`
 
 export const ProdNome = styled.h2`
   color: rgb(37, 37, 37);
-  font-size: 0.9em;
+  font-size: 1.4em;
   text-align: left;
   margin-bottom: 10px;
 `;
 
 export const ProdCard = styled.div`
   width: 300px;
-  height: 440px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -50,7 +50,7 @@ export const ContainerProd = styled.div`
 `;
 
 export const Preco = styled.h3`
-  font-size: 0.9em;
+  font-size: 1.2em;
   color: rgb(58, 58, 58);
 `;
 
@@ -63,19 +63,22 @@ export const AddCar = styled.button`
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 0.9em;
-  transition: all 0.4s ease;
+  transition: background-color 0.4s ease;
+  background-color: ${({ $adicionado }) =>
+    $adicionado ? "#198754" : "#6c757d"};
 
   &:hover {
-    background-color: #1e1e1e;
-    color: white;
+
     cursor: pointer;
   }
 `;
 
 export const AddBotao = styled.span`
+  color: white;
   font-size: 2em;
 `;
 
 export const AddTexto = styled.p`
+  color: white;
   font-size: 1em;
 `;

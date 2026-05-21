@@ -1,15 +1,20 @@
-import NomeProduto from "./NomeProduto";
+import CardProduto from "./CardProduto";
 
-export default function Produto({ produtos, handleCarrinho }) {
+export default function Produto({ produtos, handleCarrinho, carregando, isAdd}) {
   return (
     <>
-      {produtos.map((produto) => (
-        <NomeProduto
-          produto={produto}
-          key={produto.id}
-          handleCarrinho={handleCarrinho}
-        />
-      ))}
+      {carregando ? (
+        <p>Carregando...</p>
+      ) : (
+        produtos.map((produto) => (
+          <CardProduto
+            produto={produto}
+            key={produto.id}
+            handleCarrinho={handleCarrinho}
+            isAdd={isAdd}
+          />
+        ))
+      )}
     </>
   );
 }

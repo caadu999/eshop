@@ -4,24 +4,24 @@ import {
   AddTexto,
   ContainerDesc,
   ContainerProd,
-  Img,
   Preco,
   ProdCard,
   ProdNome,
 } from "./styles";
 
-export default function NomeProduto({ produto, handleCarrinho }) {
+export default function NomeProduto({ produto, handleCarrinho, isAdd }) {
   return (
     <ProdCard>
-      <Img src={produto.image} alt="produto" />
       <ContainerDesc>
         <ContainerProd>
           <ProdNome>{produto.title}</ProdNome>
           <Preco>R${produto.price}</Preco>
         </ContainerProd>
       </ContainerDesc>
-      <AddCar onClick={() => handleCarrinho(produto)}>
-        <AddTexto>Adicionar ao carrinho</AddTexto>
+      <AddCar onClick={() => handleCarrinho(produto)} $adicionado={isAdd.includes(produto.id)}>
+        <AddTexto>
+          {isAdd.includes(produto.id) ? "Adicionado" : "Adicionar ao carrinho"}
+        </AddTexto>
         <AddBotao>+</AddBotao>
       </AddCar>
     </ProdCard>

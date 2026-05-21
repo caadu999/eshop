@@ -1,26 +1,35 @@
 import Carrinhoitem from "./Carrinhoitem";
+import {
+  Botao,
+  BotaoVar,
+  CarrinhoCima,
+  Container,
+  ContainerPreco,
+  ContainerProd,
+  Preco,
+  Texto,
+} from "./styles";
 
 export default function Carrinho({ handleOpen, carrinho, totalFormatado }) {
   return (
-    <div className="carrinho">
-      <div className="carrinho__top">
-        <h3>CARRINHO</h3>
-        <button onClick={handleOpen} className="fechar">
+    <Container>
+      <CarrinhoCima>
+        <BotaoVar onClick={handleOpen}>
           X
-        </button>
-      </div>
-      <div className="carrinho__prod">
+        </BotaoVar>
+      </CarrinhoCima>
+      <ContainerProd>
         {carrinho.map((prodCar, i) => (
           <Carrinhoitem key={i} prodCar={prodCar} />
         ))}
-      </div>
-      <div className="carrinho__total">
-        <div className="carrinho__preco">
-          <p>TOTAL:</p>
-          <p>R${totalFormatado}</p>
-        </div>
-        <button className="carrinho__button">continuar</button>
-      </div>
-    </div>
+      </ContainerProd>
+      <ContainerPreco>
+        <Preco>
+          <Texto>TOTAL:</Texto>
+          <Texto>R${totalFormatado}</Texto>
+        </Preco>
+        <Botao>Continuar</Botao>
+      </ContainerPreco>
+    </Container>
   );
 }

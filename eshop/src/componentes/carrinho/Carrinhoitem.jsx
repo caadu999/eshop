@@ -1,11 +1,12 @@
+import { ContainerItem, ItemInfo } from "./styles";
+
 export default function Carrinhoitem({ prodCar }) {
   return (
-    <div className="carrinho__item">
-      <img className="item__img" src={prodCar.image} alt="" />
-      <div className="item__info">
+    <ContainerItem>
+      <ItemInfo>
         <h2>{prodCar.title}</h2>
-        <p>{prodCar.price}</p>
-      </div>
-    </div>
+        <p>R${prodCar.price}</p>
+      </ItemInfo>
+    </ContainerItem>
   );
 }

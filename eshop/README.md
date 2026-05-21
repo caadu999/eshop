@@ -1,16 +1,26 @@
-# React + Vite
+Aplicação web desenvolvida em React para exibição e gerenciamento de um catálogo de produtos, com funcionalidade para adicionar um produto no carrinho de compras.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+------- Tecnologias Utilizadas -------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React — biblioteca para construção da interface
+Styled Components — estilização com CSS-in-JS
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+------- Como executar o projeto -------
 
-## Expanding the ESLint configuration
+# Clone o repositório
+git clone https://github.com/caadu999/eshop
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Acesse a pasta do projeto
+cd eshop
+
+# Instale as dependências
+npm install
+
+# Execute a aplicação
+npm run dev
+
+A aplicação estará disponível em http://localhost:5173
+
+

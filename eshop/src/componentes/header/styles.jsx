@@ -28,7 +28,6 @@ export const BotaoVar = styled(Botao)`
   border: solid 1px #1f1f1f;
   color: #1f1f1f;
   background-color: #e9e9e9;
-
   &:hover {
     color: white;
   }
